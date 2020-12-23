@@ -107,12 +107,6 @@ new Chart(document.getElementById("MyLineChart"), {
         backgroundColor: "#3e95cd",
           borderColor:"#3e95cd",
         fill: false
-      }, { 
-        data: [15,10,20,12],
-        label: "attribute 4",
-         backgroundColor: "#5ec2e2",
-        borderColor: "#5ec2e2",
-        fill: false
       }
     ]},
   options: {
