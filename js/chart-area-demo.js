@@ -127,8 +127,69 @@ new Chart(document.getElementById("MyLineChart"), {
 });
 
 
+// Group Bar Chart
+var barChartData = {
+  labels: [
+    "Group 1",
+    "Group 2",
+    "Group 3"
+  ],
+  datasets: [
+    {
+      label: "attribute 1",
+      backgroundColor: "#3e95cd",
+      borderColor: "#3e95cd",
+      borderWidth: 1,
+      data: [2, 4, 6]
+    },
+    {
+      label: "attribute 2",
+      backgroundColor: "#31E791",
+      borderColor: "#31E791",
+      borderWidth: 1,
+      data: [7, 3, 5]
+    },
+    {
+      label: "attribute 3",
+      backgroundColor: "#5cb544",
+      borderColor: "#5cb544",
+      borderWidth: 1,
+      data: [6,7,3]
+    }
+  ]
+};
+
+var chartOptions = {
+    
+     legend: {
+                  position: 'bottom',
+                  display: true
+              },
+      maintainAspectRatio: false,
+    layout: {
+      padding: {
+        left: 40,
+        right: 40,
+        top: 25,
+        bottom: 0
+      }
+  },  scales: {
+      
+        xAxes: [{
+            barPercentage: 0.5
+        }],
+      
+    yAxes: [{
+      ticks: {
+        beginAtZero: true
+      }
+    }]
+  }
+}
+
+
 window.onload = function() {
-  var UserGroupBarChart = document.getElementById("BarChartUserGroup").getContext("2d");
+  var UserGroupBarChart = document.getElementById("BarChartGroup").getContext("2d");
   window.myBar = new Chart(UserGroupBarChart, {
     type: "bar",
     data: barChartData,
